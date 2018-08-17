@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Wavelash</string>
+    <string name="speech_prompt">Command!</string>
+</resources>

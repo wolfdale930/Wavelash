@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/scheduler_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:hint="Enter Scheduler Name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorText"
+            android:textSize="25sp"
+            android:text="Event Type:"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/type_eta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorText"
+                android:textSize="20sp"
+                android:checked="true"
+                android:layout_marginBottom="5dp"
+                android:text="ETA"/>
+
+            <RadioButton
+                android:id="@+id/type_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorText"
+                android:textSize="20sp"
+                android:checked="false"
+                android:layout_marginBottom="5dp"
+                android:text="Alarm"/>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TimePicker
+                android:id="@+id/eta_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:timePickerMode="spinner"
+                android:overScrollMode="ifContentScrolls"/>
+
+
+            <TimePicker
+                android:id="@+id/alarm_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:timePickerMode="clock"
+                android:overScrollMode="ifContentScrolls"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:text="Appliances:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:layout_margin="2dp"
+                android:textColor="@color/colorSecondary"/>
+            <CheckBox
+                android:id="@+id/bedroom_fans_check"
+                android:text="Bedroom Fans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="2dp"
+                android:textColor="@android:color/darker_gray"/>
+            <CheckBox
+                android:id="@+id/bedroom_lights_check"
+                android:text="Bedroom Lights"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="2dp"
+                android:textColor="@android:color/darker_gray"/>
+            <CheckBox
+                android:id="@+id/drawingroom_fans_check"
+                android:text="Drawing Room Fans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="2dp"
+                android:textColor="@android:color/darker_gray"/>
+            <CheckBox
+                android:id="@+id/drawingroom_lights_check"
+                android:text="Drawing Room Lights"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="2dp"
+                android:textColor="@android:color/darker_gray"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_margin="5dp"
+                android:id="@+id/delete_scheduler"
+                android:text="DELETE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:text="SAVE"
+                android:layout_margin="5dp"
+                android:id="@+id/save_scheduler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>
